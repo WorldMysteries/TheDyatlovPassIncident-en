@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Перевал Дятлова — история самой загадочной трагедии Северного Урала. Ночь с 1 на 2 февраля 1959 года. Холатчахль, 1079 метров." />
+<meta name="description" content="Dyatlov Pass — the story of the most mysterious tragedy of the Northern Urals. The night of February 1–2, 1959. Kholat Syakhl, 1079 meters." />
 <meta name="theme-color" content="#05070b" />
-<title>Перевал Дятлова — Гора мертвецов · 1959</title>
+<title>Dyatlov Pass — Mountain of the Dead · 1959</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&family=Manrope:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -42,7 +42,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 ::-webkit-scrollbar-thumb{background:#1c222c;border:2px solid var(--abyss);border-radius:6px}
 ::-webkit-scrollbar-thumb:hover{background:var(--blood)}
 
-/* ---------- атмосфера ---------- */
+/* ---------- atmosphere ---------- */
 .grain{
   position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.05;
   background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
@@ -50,7 +50,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 }
 #snow{position:fixed;inset:0;z-index:60;pointer-events:none}
 
-/* ---------- типографика ---------- */
+/* ---------- typography ---------- */
 .display{font-family:var(--display);font-weight:900;letter-spacing:-.025em;line-height:.95}
 .outline{-webkit-text-stroke:1.5px rgba(237,239,241,.35);color:transparent}
 .outline-red{-webkit-text-stroke:1.5px rgba(201,64,61,.7);color:transparent}
@@ -61,7 +61,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .ember{color:var(--ember)}
 .italic{font-family:var(--display);font-style:italic;font-weight:500}
 
-/* ---------- прелоадер ---------- */
+/* ---------- preloader ---------- */
 #preloader{
   position:fixed;inset:0;z-index:100;background:var(--abyss);
   display:flex;flex-direction:column;align-items:center;justify-content:center;
@@ -78,7 +78,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .fade-in{opacity:0;animation:fadeUp .9s ease forwards}
 @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 
-/* ---------- навбар ---------- */
+/* ---------- navbar ---------- */
 header{position:fixed;top:0;left:0;right:0;z-index:70}
 .nav{position:relative;border-bottom:1px solid var(--line);background:rgba(5,7,11,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
 .nav-in{max-width:1600px;margin:0 auto;padding:1rem var(--pad);display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
@@ -93,7 +93,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:70}
 #progress{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:var(--blood)}
 @media(max-width:900px){.nav-links{display:none}}
 
-/* ---------- герой ---------- */
+/* ---------- hero ---------- */
 .hero{position:relative;height:100svh;min-height:620px;overflow:hidden}
 .hero-bg{position:absolute;inset:-9% -4%;}
 .hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.12);animation:heroZoom 2.6s cubic-bezier(.22,1,.36,1) forwards}
@@ -121,25 +121,25 @@ header{position:fixed;top:0;left:0;right:0;z-index:70}
 .scroll-cue:hover{border-color:var(--blood);color:var(--frost)}
 @keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
 
-/* ---------- бегущая строка ---------- */
+/* ---------- marquee ---------- */
 .marquee{position:relative;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel);padding:1.15rem 0}
 .marquee-track{display:flex;width:max-content;align-items:center;gap:2.6rem;white-space:nowrap;animation:slide 38s linear infinite}
 @keyframes slide{to{transform:translateX(-50%)}}
 .marquee-track .item{display:flex;align-items:center;gap:2.6rem}
 .marquee-track .dot{width:5px;height:5px;background:var(--blood);opacity:.8;transform:rotate(45deg);flex:none}
 
-/* ---------- каркас секций ---------- */
+/* ---------- section framework ---------- */
 section{position:relative}
 .wrap{max-width:1600px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
 .chapter{display:flex;align-items:center;gap:1.35rem}
 .chapter .num{font-family:var(--display);font-weight:900;font-size:clamp(3.25rem,6vw,4.5rem);line-height:1}
 .chapter .rule{height:1px;width:4rem;background:var(--blood);margin-bottom:.75rem}
 
-/* появление */
+/* reveal on scroll */
 .reveal{opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.22,1,.36,1),transform 1s cubic-bezier(.22,1,.36,1)}
 .reveal.in{opacity:1;transform:none}
 
-/* ---------- глава 01 ---------- */
+/* ---------- chapter 01 ---------- */
 .lead{margin-top:3.5rem;max-width:70rem;font-family:var(--display);font-weight:400;font-size:clamp(1.75rem,3.5vw,3.15rem);line-height:1.28;letter-spacing:-.015em}
 .lead .accent{color:var(--blood);text-decoration:underline;text-decoration-color:rgba(201,64,61,.4);text-underline-offset:.45em}
 .two-col{margin-top:6rem;display:grid;gap:4.5rem}
@@ -169,7 +169,7 @@ section{position:relative}
 .col-img .cap q{display:block;max-width:19rem;font-family:var(--display);font-style:italic;font-size:1.35rem;line-height:1.4;color:var(--frost)}
 .credit{margin-top:1rem;text-align:right;color:var(--mist)}
 
-/* ---------- глава 02 ---------- */
+/* ---------- chapter 02 ---------- */
 .timeline-wrap{margin-top:5rem;display:grid;gap:3.75rem}
 @media(min-width:1050px){.timeline-wrap{grid-template-columns:1fr 1.4fr;gap:4rem}}
 .tl-side h2{font-family:var(--display);font-weight:900;font-size:clamp(2.75rem,5.2vw,4.5rem);line-height:.95;letter-spacing:-.025em}
@@ -187,7 +187,7 @@ section{position:relative}
 .tl li.final .date{color:var(--ember)}
 .tl p{margin-top:.85rem;max-width:37rem;color:var(--ash);font-size:.95rem;line-height:1.8}
 
-/* ---------- глава 03 ---------- */
+/* ---------- chapter 03 ---------- */
 .head-2{margin-top:3.5rem;display:flex;flex-direction:column;gap:1.75rem}
 @media(min-width:900px){.head-2{flex-direction:row;align-items:flex-end;justify-content:space-between}}
 .head-2 h2{font-family:var(--display);font-weight:900;font-size:clamp(3.15rem,7.6vw,6.25rem);line-height:.95;letter-spacing:-.03em}
@@ -215,7 +215,7 @@ section{position:relative}
 .yudin .left{display:flex;align-items:center;gap:1.35rem}
 .ico{width:22px;height:22px;flex:none;color:var(--ember)}
 
-/* ---------- глава 04 ---------- */
+/* ---------- chapter 04 ---------- */
 .night{background:rgba(10,13,19,.4);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-top:clamp(5.5rem,11vw,9.5rem);padding-bottom:clamp(5.5rem,11vw,9.5rem)}
 .night h2{margin-top:3.5rem;max-width:66rem;font-family:var(--display);font-weight:900;font-size:clamp(2.85rem,7.4vw,6.35rem);line-height:.98;letter-spacing:-.03em}
 .quote-block{margin:clamp(5.5rem,10vw,9.5rem) 0;text-align:center}
@@ -251,7 +251,7 @@ section{position:relative}
 .strip figcaption{position:absolute;left:0;bottom:0;max-width:34rem;padding:clamp(1.75rem,4vw,3.15rem)}
 .strip figcaption q{display:block;margin-top:.95rem;font-family:var(--display);font-size:clamp(1.35rem,2.6vw,1.95rem);line-height:1.32;color:var(--frost)}
 
-/* ---------- глава 05 ---------- */
+/* ---------- chapter 05 ---------- */
 .theories{overflow:hidden;padding-top:clamp(5.5rem,11vw,9.5rem);padding-bottom:clamp(5.5rem,11vw,9.5rem);border-top:1px solid var(--line)}
 .aurora{position:absolute;inset:-6% 0;overflow:hidden}
 .aurora img{width:100%;height:112%;object-fit:cover;opacity:.25}
@@ -277,7 +277,7 @@ section{position:relative}
 .after-acc{margin-top:3.15rem;max-width:34rem;font-family:var(--display);font-style:italic;font-size:1.05rem;line-height:1.75;color:var(--mist)}
 @media(max-width:640px){.acc-btn .st{display:none}}
 
-/* ---------- глава 06 ---------- */
+/* ---------- chapter 06 ---------- */
 .gallery{padding-top:clamp(5.5rem,11vw,9.5rem);padding-bottom:clamp(5.5rem,11vw,9.5rem);border-top:1px solid var(--line)}
 .gal-head{display:flex;flex-direction:column;gap:1.65rem}
 @media(min-width:820px){.gal-head{flex-direction:row;align-items:flex-end;justify-content:space-between}}
@@ -291,7 +291,7 @@ section{position:relative}
 .frame figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.35rem}
 .frame figcaption q{font-family:var(--display);font-style:italic;font-size:1.15rem}
 
-/* ---------- эпилог ---------- */
+/* ---------- epilogue ---------- */
 .epilogue{padding-top:clamp(5.5rem,11vw,9.5rem);padding-bottom:clamp(5.5rem,11vw,9.5rem);border-top:1px solid var(--line)}
 .epi-quote{margin:5.5rem auto 0;max-width:62rem;text-align:center}
 .epi-quote p{font-family:var(--display);font-size:clamp(1.85rem,4.6vw,3.85rem);line-height:1.22;font-weight:400;letter-spacing:-.02em}
@@ -309,7 +309,7 @@ section{position:relative}
 .verdict{margin-top:4.25rem;border:1px dashed rgba(201,64,61,.42);background:rgba(10,13,19,.5);padding:clamp(2.15rem,4vw,3.15rem);text-align:center}
 .verdict q{display:block;margin:1.35rem auto 0;max-width:46rem;font-family:var(--display);font-style:italic;font-size:clamp(1.15rem,2.4vw,1.65rem);line-height:1.45}
 
-/* ---------- подвал ---------- */
+/* ---------- footer ---------- */
 footer{border-top:1px solid var(--line);overflow:hidden}
 .foot-top{display:flex;flex-direction:column;gap:3.75rem;padding-top:clamp(5rem,9vw,8rem)}
 @media(min-width:900px){.foot-top{flex-direction:row;justify-content:space-between}}
@@ -337,31 +337,31 @@ footer{border-top:1px solid var(--line);overflow:hidden}
 <div class="grain"></div>
 <canvas id="snow"></canvas>
 
-<!-- ================= ПРЕЛОАДЕР ================= -->
+<!-- ================= PRELOADER ================= -->
 <div id="preloader">
   <div class="lines gridlines"></div>
-  <p class="mono mist fade-in" style="animation-delay:.3s">Свердловская обл. · Северный Урал</p>
+  <p class="mono mist fade-in" style="animation-delay:.3s">Sverdlovsk Oblast · Northern Urals</p>
   <div class="pl-year" style="margin-top:1.5rem"><span>1959</span></div>
   <div class="pl-bar"></div>
   <div class="mono ash fade-in" style="margin-top:1.65rem;display:flex;align-items:center;gap:.95rem;animation-delay:.7s">
     <span style="width:6px;height:6px;border-radius:50%;background:var(--blood);animation:pulse 2.4s ease-in-out infinite"></span>
-    Загрузка архива дела
+    Loading the case archive
   </div>
   <p class="mono mist fade-in" style="position:absolute;bottom:2.75rem;animation-delay:.9s">61°45′N · 59°27′E</p>
 </div>
 <style>@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}</style>
 
-<!-- ================= НАВИГАЦИЯ ================= -->
+<!-- ================= NAVIGATION ================= -->
 <header>
   <div class="nav">
     <div class="nav-in">
-      <a class="brand mono" href="#top"><i></i><span>Перевал<span class="blood">/</span>59</span></a>
+      <a class="brand mono" href="#top"><i></i><span>Pass<span class="blood">/</span>59</span></a>
       <nav class="nav-links mono">
-        <a href="#expedition">Экспедиция</a>
-        <a href="#crew">Группа</a>
-        <a href="#night">Ночь</a>
-        <a href="#theories">Версии</a>
-        <a href="#archive">Архив</a>
+        <a href="#expedition">Expedition</a>
+        <a href="#crew">The Group</a>
+        <a href="#night">The Night</a>
+        <a href="#theories">Theories</a>
+        <a href="#archive">Archive</a>
       </nav>
       <span class="mono mist" style="letter-spacing:.3em">61°45′N 59°27′E</span>
     </div>
@@ -371,162 +371,162 @@ footer{border-top:1px solid var(--line);overflow:hidden}
 
 <main>
 
-<!-- ================= ГЕРОЙ ================= -->
+<!-- ================= HERO ================= -->
 <section class="hero" id="top">
   <div class="hero-bg" data-parallax="0.22">
-    <img src="images/hero-pass.jpg" alt="Склон горы Холатчахль ночью" />
+    <img src="images/hero-pass.jpg" alt="The slope of Kholat Syakhl at night" />
   </div>
   <div class="scrim b"></div>
   <div class="scrim r"></div>
 
   <div class="hero-meta">
     <div class="row">
-      <span class="mono ash fade-in" style="animation-delay:2.15s">Холатчахль · Гора мертвецов</span>
-      <span class="mono ash fade-in" style="animation-delay:2.35s">Уголовное дело · прекращено</span>
+      <span class="mono ash fade-in" style="animation-delay:2.15s">Kholat Syakhl · Mountain of the Dead</span>
+      <span class="mono ash fade-in" style="animation-delay:2.35s">Criminal case · closed</span>
     </div>
   </div>
 
   <div class="stamp fade-in" style="animation-delay:2.6s">
-    <p class="mono ember">Ночь с 1 на 2 февраля</p>
+    <p class="mono ember">Night of February 1–2</p>
     <div class="rule"></div>
   </div>
 
   <div class="hero-title">
     <div class="in">
-      <div class="mask"><h1 class="h1a d0">ПЕРЕВАЛ</h1></div>
-      <div class="mask"><h1 class="h1b d1"><span class="outline">Дя</span><span>тлова</span></h1></div>
+      <div class="mask"><h1 class="h1a d0">DYATLOV</h1></div>
+      <div class="mask"><h1 class="h1b d1"><span class="outline">PA</span><span>SS</span></h1></div>
       <div class="hero-foot">
-        <div class="mask"><p class="d2">Девять туристов вышли на склон — и не вернулись. Палатка, разрезанная изнутри. Следы босых ног в тридцатиградусный мороз. Тайна, которой уже шестьдесят семь лет.</p></div>
+        <div class="mask"><p class="d2">Nine hikers walked up the slope — and never came back. A tent slashed open from the inside. Barefoot tracks in thirty below. A mystery sixty-seven years old.</p></div>
         <div class="mask">
           <div class="hero-stats d3">
-            <span class="mono"><b>9</b>погибших</span>
-            <span class="mono"><b>−30°</b>мороза</span>
-            <span class="mono"><b>1079</b>метров</span>
+            <span class="mono"><b>9</b>dead</span>
+            <span class="mono"><b>−30°</b>frost</span>
+            <span class="mono"><b>1079</b>meters</span>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <a class="scroll-cue" href="#expedition" aria-label="Листать вниз">
+  <a class="scroll-cue" href="#expedition" aria-label="Scroll down">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 9l6 6 6-6"/></svg>
   </a>
 </section>
 
-<!-- ================= БЕГУЩАЯ СТРОКА ================= -->
+<!-- ================= MARQUEE ================= -->
 <div class="marquee">
   <div class="marquee-track mono ash" id="marquee"></div>
 </div>
 
-<!-- ================= ГЛАВА 01 ================= -->
+<!-- ================= CHAPTER 01 ================= -->
 <section id="expedition" style="padding:clamp(5.5rem,11vw,9.5rem) 0">
   <div class="wrap">
     <div class="chapter reveal">
       <span class="num outline">01</span>
-      <span><span class="rule" style="display:block"></span><span class="mono ash">Глава · Экспедиция</span></span>
+      <span><span class="rule" style="display:block"></span><span class="mono ash">Chapter · Expedition</span></span>
     </div>
 
-    <p class="lead reveal">В январе 1959 года десять молодых туристов Уральского политехнического ушли в лыжный поход <span class="accent">высшей категории сложности</span> — триста пятьдесят километров по слепящей белизне Северного Урала. Домой не вернулся никто из <span class="accent">девяти</span>.</p>
+    <p class="lead reveal">In January 1959, ten young hikers from the Ural Polytechnic Institute set out on a ski expedition of <span class="accent">the highest difficulty grade</span> — three hundred and fifty kilometres through the blinding whiteness of the Northern Urals. None of <span class="accent">the nine</span> ever came home.</p>
 
     <div class="two-col">
       <div class="col-text">
         <div class="reveal">
-          <p>Группу вёл 23-летний студент-пятикурсник Игорь Дятлов — опытный турист, собравший вокруг себя друзей и знакомых. Маршрут был сложен, но не безумен: такие походы советская туристская школа проходила десятками. Цель — гора Отортен, в мансийском её имя звучит недобро: «Туда буря зовёт», «Гора ветров».</p>
-          <p>28 января из-за болезни с маршрута сошёл Юрий Юдин. Он простился с ребятами у опушки леса, не зная, что видит их в последний раз — и что это спасёт ему жизнь.</p>
+          <p>The group was led by 23-year-old fifth-year student Igor Dyatlov — an experienced hiker who gathered friends and acquaintances around him. The route was difficult but not insane: the Soviet hiking school had passed dozens of such expeditions. The goal was Mount Otorten, whose Mansi name sounds ominous: «Don't go there», «The Mountain of Winds».</p>
+          <p>On January 28, Yuri Yudin dropped off the route due to illness. He said goodbye to the others at the edge of the forest, not knowing that he was seeing them for the last time — and that this would save his life.</p>
         </div>
 
         <div class="facts reveal">
-          <div><b>350</b><span class="mono">км маршрута</span></div>
-          <div><b>III</b><span class="mono">категория сложности</span></div>
-          <div><b>16</b><span class="mono">дней на всё</span></div>
+          <div><b>350</b><span class="mono">km of route</span></div>
+          <div><b>III</b><span class="mono">difficulty grade</span></div>
+          <div><b>16</b><span class="mono">days in total</span></div>
         </div>
 
         <div class="card reveal">
           <div class="card-head">
             <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="19" r="3"/><circle cx="18" cy="5" r="3"/><path d="M9 19h5a4 4 0 0 0 0-8h-4a4 4 0 0 1 0-8h5"/></svg>
-            <span class="mono ash">Нить маршрута</span>
+            <span class="mono ash">The route</span>
           </div>
           <ul class="route">
-            <li><span class="nm">Свердловск</span><span class="nt mono">старт, 23 января</span></li>
-            <li><span class="nm">Ивдель</span><span class="nt mono">последний поезд</span></li>
-            <li><span class="nm">Вижай</span><span class="nt mono">последнее жильё</span></li>
-            <li><span class="nm">2-й Северный</span><span class="nt mono">заброшенный посёлок</span></li>
-            <li><span class="nm">Перевал</span><span class="nt mono">высота 1079 м</span></li>
-            <li><span class="nm">Отортен</span><span class="nt mono">цель · не достигнута</span></li>
+            <li><span class="nm">Sverdlovsk</span><span class="nt mono">start, Jan 23</span></li>
+            <li><span class="nm">Ivdel</span><span class="nt mono">the last train</span></li>
+            <li><span class="nm">Vizhay</span><span class="nt mono">the last lodging</span></li>
+            <li><span class="nm">2nd Severny</span><span class="nt mono">abandoned settlement</span></li>
+            <li><span class="nm">The Pass</span><span class="nt mono">elevation 1079 m</span></li>
+            <li><span class="nm">Otorten</span><span class="nt mono">goal · never reached</span></li>
           </ul>
         </div>
       </div>
 
       <div class="col-img">
         <figure class="reveal">
-          <img src="images/march.jpg" alt="Группа уходит в белую пургу" />
+          <img src="images/march.jpg" alt="The group heads into a white blizzard" />
           <div class="scrim"></div>
           <figcaption class="cap">
             <div>
               <p class="mono ember" style="display:flex;align-items:center;gap:.65rem">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 3l4 8 5-5 5 16H2L8 3z"/></svg>
-                Ауспийская долина
+                Auspiya Valley
               </p>
-              <q>«Идём по следу оленьей тропы. Встретили оленей — стадо ушло в туман»</q>
+              <q>«We follow the deer trail. We met deer — the herd vanished into the fog»</q>
             </div>
             <svg class="ico ash" style="margin-bottom:.35rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </figcaption>
         </figure>
-        <p class="credit mono">Кадр из группового дневника · январь 1959</p>
+        <p class="credit mono">Frame from the group diary · January 1959</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= ГЛАВА 02 ================= -->
+<!-- ================= CHAPTER 02 ================= -->
 <section style="padding:clamp(5.5rem,11vw,9.5rem) 0;border-top:1px solid var(--line)">
   <div class="wrap">
     <div class="chapter reveal">
       <span class="num outline">02</span>
-      <span><span class="rule" style="display:block"></span><span class="mono ash">Глава · Хронология</span></span>
+      <span><span class="rule" style="display:block"></span><span class="mono ash">Chapter · Chronology</span></span>
     </div>
 
     <div class="timeline-wrap">
       <div class="tl-side">
         <div class="sticky">
-          <h2 class="reveal">Девять дней<br><span class="outline">до тишины</span></h2>
-          <p class="reveal">Каждую ночь туристы записывали маршрут и километраж. Дневники обрываются 31 января — за сутки до смерти.</p>
+          <h2 class="reveal">Nine days<br><span class="outline">to silence</span></h2>
+          <p class="reveal">Every night the hikers recorded their route and mileage. The diaries break off on January 31 — one day before death.</p>
         </div>
       </div>
 
       <ol class="tl">
-        <li class="reveal"><span class="date mono mist">23 января</span><h3>Выезд из Свердловска</h3><p>Десять туристов с рюкзаками и лыжами садятся в поезд № 622. В тамбуре — гитара, смех, планы на «Маяк туризма».</p></li>
-        <li class="reveal"><span class="date mono mist">25 января</span><h3>Ивдель — Вижай</h3><p>Городок Ивдель, затем автобус в посёлок Вижай. Последняя ночь под крышей, последний городской душ.</p></li>
-        <li class="reveal"><span class="date mono mist">26 января</span><h3>Крайний дом</h3><p>Ночёвка в заброшенном посёлке Второй Северный. Утром — конные сани до реки Лозьва. Дальше — только снег.</p></li>
-        <li class="reveal"><span class="date mono mist">27 января</span><h3>Старт по лыжне</h3><p>Первый самостоятельный переход — 16 км вверх по замёрзшей Лозьве. Вечером первые записи дневников при свече.</p></li>
-        <li class="reveal"><span class="date mono mist">28 января</span><h3>Один уходит</h3><p>Юрию Юдину не по силам: болят суставы. Он поворачивает назад. Девятеро продолжают путь по реке Ауспия.</p></li>
-        <li class="reveal"><span class="date mono mist">31 января</span><h3>Выход к перевалу</h3><p>Группа выходит из леса. На склоне устраивают лабаз — складывают часть продуктов и снаряжения на обратный путь.</p></li>
-        <li class="reveal"><span class="date mono mist">1 февраля</span><h3>Стена вьюги</h3><p>Поздний выход, ветер и метель. Поднявшись через перевал, группа почему-то не спускается к лесу, а ставит палатку на голом склоне Холатчахля.</p></li>
-        <li class="final reveal"><span class="date mono">1–2 февраля</span><h3>Ночь. 1079 метров.</h3><p>Что-то происходит около полуночи. Палатку разрезают изнутри — и в разной одежде, босиком по пурге, все девять уходят вниз, в темноту. Больше их никто не видел живыми.</p></li>
+        <li class="reveal"><span class="date mono mist">January 23</span><h3>Departure from Sverdlovsk</h3><p>Ten hikers with backpacks and skis board train No. 622. In the vestibule — a guitar, laughter, plans for the «Tourist's Beacon» badge.</p></li>
+        <li class="reveal"><span class="date mono mist">January 25</span><h3>Ivdel — Vizhay</h3><p>The town of Ivdel, then a bus to the settlement of Vizhay. The last night under a roof, the last city shower.</p></li>
+        <li class="reveal"><span class="date mono mist">January 26</span><h3>The last house</h3><p>A night in the abandoned settlement of Second Severny. In the morning — horse-drawn sledges to the Lozva River. Beyond that — only snow.</p></li>
+        <li class="reveal"><span class="date mono mist">January 27</span><h3>Onto the ski trail</h3><p>The first independent crossing — 16 km up the frozen Lozva. In the evening, the first diary entries by candlelight.</p></li>
+        <li class="reveal"><span class="date mono mist">January 28</span><h3>One turns back</h3><p>Yuri Yudin cannot go on: his joints ache. He turns back. The nine continue up the Auspiya River.</p></li>
+        <li class="reveal"><span class="date mono mist">January 31</span><h3>Reaching the pass</h3><p>The group emerges from the forest. On the slope they set up a cache — storing part of their food and gear for the return trip.</p></li>
+        <li class="reveal"><span class="date mono mist">February 1</span><h3>Wall of blizzard</h3><p>A late start, wind and snowstorm. Having climbed over the pass, the group for some reason does not descend to the forest, but pitches the tent on the bare slope of Kholat Syakhl.</p></li>
+        <li class="final reveal"><span class="date mono">February 1–2</span><h3>Night. 1079 meters.</h3><p>Something happens around midnight. The tent is slashed open from the inside — and in whatever clothes they had, barefoot in the blizzard, all nine walk down into the darkness. No one ever sees them alive again.</p></li>
       </ol>
     </div>
   </div>
 </section>
 
-<!-- ================= ГЛАВА 03 ================= -->
+<!-- ================= CHAPTER 03 ================= -->
 <section id="crew" style="padding:clamp(5.5rem,11vw,9.5rem) 0;border-top:1px solid var(--line)">
   <div class="wrap">
     <div class="chapter reveal">
       <span class="num outline">03</span>
-      <span><span class="rule" style="display:block"></span><span class="mono ash">Глава · Группа</span></span>
+      <span><span class="rule" style="display:block"></span><span class="mono ash">Chapter · The Group</span></span>
     </div>
 
     <div class="head-2">
-      <h2 class="reveal">Девять<br><span class="italic outline">имён</span></h2>
-      <p class="reveal">Студенты и выпускники УПИ. Самой младшей было двадцать, старшему — тридцать семь. У каждого были билеты домой, письма, планы на весну.</p>
+      <h2 class="reveal">Nine<br><span class="italic outline">names</span></h2>
+      <p class="reveal">Students and graduates of UPI. The youngest was twenty, the oldest thirty-seven. Each had tickets home, letters, plans for spring.</p>
     </div>
 
     <figure class="archive-photo reveal">
-      <img src="images/group.jpg" alt="Архивная фотография группы Дятлова" />
+      <img src="images/group.jpg" alt="Archive photograph of the Dyatlov group" />
       <div class="scrim"></div>
       <figcaption>
-        <span class="mono" style="color:rgba(237,239,241,.82)">Вижай · конец января 1959</span>
-        <span class="mono mist">Архив · серебряный отпечаток</span>
+        <span class="mono" style="color:rgba(237,239,241,.82)">Vizhay · late January 1959</span>
+        <span class="mono mist">Archive · silver print</span>
       </figcaption>
     </figure>
 
@@ -536,67 +536,67 @@ footer{border-top:1px solid var(--line);overflow:hidden}
       <div class="left">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/><path d="M3.5 12h4l1.5-3 2.5 6 2-4 1.5 2.5h5"/></svg>
         <div>
-          <h3>Юрий Юдин <span class="mist">· 21 год</span></h3>
-          <p class="mono ash" style="margin-top:.35rem;letter-spacing:.25em">Сошёл с маршрута 28 января — единственный выживший</p>
+          <h3>Yuri Yudin <span class="mist">· 21</span></h3>
+          <p class="mono ash" style="margin-top:.35rem;letter-spacing:.25em">Left the route on January 28 — the only survivor</p>
         </div>
       </div>
-      <p class="quote">«Я повернулся, помахал им рукой. И больше не видел их никогда.»</p>
+      <p class="quote">«I turned around, waved to them. And I never saw them again.»</p>
     </div>
   </div>
 </section>
 
-<!-- ================= ГЛАВА 04 ================= -->
+<!-- ================= CHAPTER 04 ================= -->
 <section class="night" id="night">
   <div class="wrap">
     <div class="chapter reveal">
       <span class="num outline-red">04</span>
-      <span><span class="rule" style="display:block"></span><span class="mono ash">Глава · Ночь</span></span>
+      <span><span class="rule" style="display:block"></span><span class="mono ash">Chapter · The Night</span></span>
     </div>
 
-    <h2 class="reveal">Ночь, которая<br><span class="italic" style="color:var(--blood)">не даёт ответов</span></h2>
+    <h2 class="reveal">The night that<br><span class="italic" style="color:var(--blood)">gives no answers</span></h2>
 
     <div class="quote-block reveal">
       <div class="mark">«</div>
-      <blockquote>…причиной гибели туристов стала стихийная сила, преодолеть которую люди были не в состоянии</blockquote>
-      <footer class="mono">Постановление о прекращении уголовного дела · 28 мая 1959</footer>
+      <blockquote>…the cause of the hikers' deaths was an elemental force that people were powerless to overcome</blockquote>
+      <footer class="mono">Resolution to close the criminal case · May 28, 1959</footer>
     </div>
 
     <div class="pair">
       <figure class="reveal">
-        <img src="images/tent.jpg" alt="Найденная палатка группы" />
+        <img src="images/tent.jpg" alt="The tent found by the searchers" />
         <div class="scrim"></div>
         <figcaption>
-          <p class="mono ember">Вещдок №1</p>
-          <q>Палатка. 26 февраля 1959</q>
+          <p class="mono ember">Evidence #1</p>
+          <q>The tent. February 26, 1959</q>
         </figcaption>
       </figure>
       <figure class="reveal">
-        <img src="images/cedar.jpg" alt="Кедр с остатками костра" />
+        <img src="images/cedar.jpg" alt="The cedar with the remains of a campfire" />
         <div class="scrim"></div>
         <figcaption>
-          <p class="mono ember">В 1,5 км ниже</p>
-          <q>Кедр. Там, где обрываются следы</q>
+          <p class="mono ember">1.5 km below</p>
+          <q>The cedar. Where the tracks end</q>
         </figcaption>
       </figure>
     </div>
 
     <div class="findings">
-      <p class="label mono reveal">Что нашли поисковики · материалы дела</p>
+      <p class="label mono reveal">What the searchers found · case files</p>
       <div class="grid-find" id="find-grid"></div>
     </div>
 
     <figure class="strip reveal">
-      <img src="images/ravine.jpg" alt="Овраг у ручья, где нашли последних четверых" />
+      <img src="images/ravine.jpg" alt="The ravine by the stream, where the last four were found" />
       <div class="scrim"></div>
       <figcaption>
-        <p class="mono ember">4–5 мая 1959</p>
-        <q>Овраг у ручья. Здесь, под четырёхметровым снегом, тайна легла глубже всего.</q>
+        <p class="mono ember">May 4–5, 1959</p>
+        <q>The ravine by the stream. Here, under four meters of snow, the mystery lay deepest of all.</q>
       </figcaption>
     </figure>
   </div>
 </section>
 
-<!-- ================= ГЛАВА 05 ================= -->
+<!-- ================= CHAPTER 05 ================= -->
 <section class="theories" id="theories">
   <div class="aurora">
     <img data-parallax="0.08" src="images/aurora.jpg" alt="" aria-hidden="true" />
@@ -605,84 +605,84 @@ footer{border-top:1px solid var(--line);overflow:hidden}
   <div class="wrap">
     <div class="chapter reveal">
       <span class="num outline">05</span>
-      <span><span class="rule" style="display:block"></span><span class="mono ash">Глава · Версии</span></span>
+      <span><span class="rule" style="display:block"></span><span class="mono ash">Chapter · Theories</span></span>
     </div>
 
-    <h2 class="reveal">Почему девять опытных туристов <span class="italic outline">выбежали в мороз?</span></h2>
+    <h2 class="reveal">Why did nine experienced hikers <span class="italic outline">run out into the cold?</span></h2>
 
     <div class="acc" id="accordion"></div>
 
-    <p class="after-acc reveal">Ни одна версия не сходится с другой по всем пунктам. Возможно, поэтому перевал продолжает звать — не туристов, а тех, кто ищет ответ.</p>
+    <p class="after-acc reveal">No single version agrees with another on every point. Perhaps that is why the pass keeps calling — not to hikers, but to those who seek an answer.</p>
   </div>
 </section>
 
-<!-- ================= ГЛАВА 06 ================= -->
+<!-- ================= CHAPTER 06 ================= -->
 <section class="gallery" id="archive">
   <div class="wrap">
     <div class="gal-head">
       <div class="chapter reveal">
         <span class="num outline">06</span>
-        <span><span class="rule" style="display:block"></span><span class="mono ash">Глава · Архив</span></span>
+        <span><span class="rule" style="display:block"></span><span class="mono ash">Chapter · Archive</span></span>
       </div>
       <p class="mono mist reveal" style="display:flex;align-items:center;gap:.85rem">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="color:var(--blood)"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        тяните плёнку в сторону
+        drag the film sideways
       </p>
     </div>
   </div>
   <div class="filmstrip" id="filmstrip"></div>
 </section>
 
-<!-- ================= ЭПИЛОГ ================= -->
+<!-- ================= EPILOGUE ================= -->
 <section class="epilogue">
   <div class="wrap">
     <div class="chapter reveal">
       <span class="num outline">07</span>
-      <span><span class="rule" style="display:block"></span><span class="mono ash">Глава · Эпилог</span></span>
+      <span><span class="rule" style="display:block"></span><span class="mono ash">Chapter · Epilogue</span></span>
     </div>
 
     <div class="epi-quote reveal">
-      <p>Никто не знает, что случилось той ночью.<br><span class="red">Знают только девять — но они молчат.</span></p>
-      <p class="sub">Группу похоронили в Свердловске, на Михайловском кладбище — в закрытых гробах, под гул февральской вьюги. С тех пор каждый год на склон Холатчахля поднимаются те, кто не знал их, но помнит.</p>
+      <p>No one knows what happened that night.<br><span class="red">Only nine know — and they are silent.</span></p>
+      <p class="sub">The group was buried in Sverdlovsk, at the Mikhaylovskoye Cemetery — in closed coffins, under the howl of a February blizzard. Ever since, every year, people who never knew them but remember them climb the slope of Kholat Syakhl.</p>
     </div>
 
     <div class="stats reveal" id="stats"></div>
 
     <div class="verdict reveal">
-      <p class="mono ember">Новое расследование</p>
-      <q>В 2020 году прокуратура в четвёртый раз закрыла дело: «лавина». Но родственники, исследователи и снежный склон высотой 1079 метров с этим выводом так и не согласились.</q>
+      <p class="mono ember">New investigation</p>
+      <q>In 2020 the prosecutor's office closed the case for the fourth time: «avalanche.» But relatives, researchers, and the 1079-meter snow slope never agreed with that conclusion.</q>
     </div>
   </div>
 </section>
 
 </main>
 
-<!-- ================= ПОДВАЛ ================= -->
+<!-- ================= FOOTER ================= -->
 <footer>
   <div class="wrap">
     <div class="foot-top">
       <div class="reveal">
         <p class="mono mist" style="display:flex;align-items:center;gap:.85rem">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--blood)"><path d="M12 2v20M4.2 7l15.6 10M19.8 7L4.2 17M12 6l-3-2M12 6l3-2M12 18l-3 2M12 18l3 2"/></svg>
-          Мемориал · Свердловск, Михайловское кладбище
+          Memorial · Sverdlovsk, Mikhaylovskoye Cemetery
         </p>
-        <p class="foot-names">Игорь · Юрий · Зинаида · Людмила · Александр · Рустем · Николай · Юрий · Семён</p>
-        <p class="mono ash" style="margin-top:1.15rem;letter-spacing:.3em">1959 — навсегда в горах</p>
+        <p class="foot-names">Igor · Yuri · Zinaida · Lyudmila · Alexander · Rustem · Nikolai · Yuri · Semyon</p>
+        <p class="mono ash" style="margin-top:1.15rem;letter-spacing:.3em">1959 — forever in the mountains</p>
       </div>
 
       <div>
         <div class="foot-grid">
           <div>
-            <p class="mono mist" style="letter-spacing:.35em">Координаты</p>
+            <p class="mono mist" style="letter-spacing:.35em">Coordinates</p>
             <b>61°45′17″N</b><i>59°27′46″E</i>
           </div>
           <div>
-            <p class="mono mist" style="letter-spacing:.35em">Высота</p>
-            <b>1079 м</b><i>Холатчахль</i>
+            <p class="mono mist" style="letter-spacing:.35em">Elevation</p>
+            <b>1079 m</b><i>Kholat Syakhl</i>
           </div>
         </div>
         <a class="to-top mono" href="#top">
-          Наверх, в пургу
+          Up, into the blizzard
           <span class="circle">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
           </span>
@@ -691,28 +691,28 @@ footer{border-top:1px solid var(--line);overflow:hidden}
     </div>
   </div>
 
-  <div class="ghost"><p class="outline">Дятлов · 1959 · Дятлов</p></div>
+  <div class="ghost"><p class="outline">Dyatlov · 1959 · Dyatlov</p></div>
 
   <div class="foot-bottom mono">
-    <span>Перевал/59 — мемориальный проект</span>
-    <span>Соткано из снега и тишины · MMXXVI</span>
+    <span>Pass/59 — a memorial project</span>
+    <span>Woven from snow and silence · MMXXVI</span>
   </div>
 </footer>
 
 <script>
-/* ================== ДАННЫЕ ================== */
-var MARQUEE = ["Голодная гора","Спонтанная сила","Палатка разрезана изнутри","Дело прекращено","Холатчахль","8 пар следов","Радиоактивная пыль","Никто не выжил"];
+/* ================== DATA ================== */
+var MARQUEE = ["Mountain of the Dead","Spontaneous force","Tent slashed from inside","Case closed","Kholat Syakhl","8 pairs of tracks","Radioactive dust","No one survived"];
 
 var CREW = [
-  ["01","Игорь Дятлов","23","Руководитель группы"],
-  ["02","Зинаида Колмогорова","22","Студентка · радистка"],
-  ["03","Юрий Дорошенко","21","Студент УПИ"],
-  ["04","Людмила Дубинина","20","Студентка УПИ"],
-  ["05","Александр Колеватов","24","Студент · физик"],
-  ["06","Рустем Слободин","23","Инженер · выпускник"],
-  ["07","Николай Тибо-Бриньоль","23","Инженер · выпускник"],
-  ["08","Юрий Кривонищенко","23","Инженер комбината «Маяк»"],
-  ["09","Семён Золотарёв","37","Инструктор · фронтовик"]
+  ["01","Igor Dyatlov","23","Group leader"],
+  ["02","Zinaida Kolmogorova","22","Student · radio operator"],
+  ["03","Yuri Doroshenko","21","Student, UPI"],
+  ["04","Lyudmila Dubinina","20","Student, UPI"],
+  ["05","Alexander Kolevatov","24","Student · physicist"],
+  ["06","Rustem Slobodin","23","Engineer · graduate"],
+  ["07","Nikolai Thibeaux-Brignolle","23","Engineer · graduate"],
+  ["08","Yuri Krivonishchenko","23","Engineer at the Mayak plant"],
+  ["09","Semyon Zolotaryov","37","Instructor · war veteran"]
 ];
 
 var ICONS = {
@@ -726,50 +726,50 @@ var ICONS = {
 };
 
 var FINDINGS = [
-  {i:"tent",n:"01",t:"Палатка",g:"26 февраля · найдена",d:"Полузасыпана настом. Три разреза — изнутри. Внутри в идеальном порядке: валенки, тёплые куртки, деньги, спирт, энциклопедии. Всё самое нужное — оставлено."},
-  {i:"foot",n:"02",t:"Следы",g:"8–9 пар вниз по склону",d:"Цепочка следов уходит к лесу: уверенный, ровный шаг. Один — в носках. Два — босые. Через 500 метров снег заметает их до камня."},
-  {i:"flame",n:"03",t:"Кедр",g:"в 1,5 км от палатки",d:"Под крупной сибирской кедровой сосной — остатки сгоревшего костра и двое: Дорошенко и Кривонищенко. Раздеты до белья. Ветки обломаны на высоте 5 метров."},
-  {i:"up",n:"04",t:"Склон",g:"на пути к палатке",d:"Дятлов, Колмогорова и Слободин лежат цепочкой на подъёме — ползли навстречу морозу, обратно к палатке. Одежда собрана с погибших первыми."},
-  {i:"wave",n:"05",t:"Овраг",g:"май · под 4 метрами снега",d:"Последних четверых — Дубинину, Золотарёва, Тибо-Бриньоля и Колеватова — находят у дна оврага у ручья. Тяжелейшие внутренние травмы, сопоставимые с автокатастрофой. Кожи — ни царапины."},
-  {i:"rad",n:"06",t:"Излучение",g:"экспертиза · 1959",d:"На одежде Дубининой и Кривонищенко физики фиксируют бета-загрязнение. Вопрос «откуда?» в деле так и повисает без ответа."}
+  {i:"tent",n:"01",t:"The tent",g:"February 26 · found",d:"Half-buried under crust. Three cuts — from the inside. Inside, in perfect order: felt boots, warm jackets, money, alcohol, encyclopedias. All the essentials — left behind."},
+  {i:"foot",n:"02",t:"The tracks",g:"8–9 pairs down the slope",d:"A chain of tracks leads down toward the forest: a confident, even stride. One in socks. Two barefoot. After 500 meters the snow erases them to the rock."},
+  {i:"flame",n:"03",t:"The cedar",g:"1.5 km from the tent",d:"Beneath a great Siberian cedar — remains of a burnt-out fire and two bodies: Doroshenko and Krivonishchenko. Stripped to their underwear. Branches broken off at a height of 5 meters."},
+  {i:"up",n:"04",t:"The slope",g:"on the way to the tent",d:"Dyatlov, Kolmogorova, and Slobodin lie in a line on the ascent — crawling toward the frost, back toward the tent. Clothing gathered from those who died first."},
+  {i:"wave",n:"05",t:"The ravine",g:"May · under 4 meters of snow",d:"The last four — Dubinina, Zolotaryov, Thibeaux-Brignolle, and Kolevatov — are found at the bottom of the ravine by the stream. Severe internal injuries comparable to a car crash. Not a scratch on the skin."},
+  {i:"rad",n:"06",t:"The radiation",g:"examination · 1959",d:"On the clothing of Dubinina and Krivonishchenko, physicists record beta contamination. The question «from where?» hangs unanswered in the case file."}
 ];
 
 var THEORIES = [
-  {n:"01",t:"Снежный наст",s:"Официально · 2020",k:"red",
-   d:"В 2020 году Генпрокуратура РФ назвала причиной гибели сход лавины: ночью на палатку ополз снежный пласт — «настовая доска». Разрезав брезент изнутри, группа выбралась в буран и за полтора километра ушла к лесу, чтоб не погибнуть под повторным сходом. Холод и ветер добили остальное.",
-   e:"Объясняет: поспешный уход, травмы настом. Не объясняет: почему не вернулись за тёплыми вещами утром."},
-  {n:"02",t:"Катабатический ветер",s:"Метеорология",k:"",
-   d:"С вершины Холатчахля по склону может обрушиться нисходящий ураганный ветер — «буран-вихрь». Порывы до 40 м/с выворачивают палатки, сбивают с ног, вызывают панику и быструю потерю ориентации. Спасаясь от валящего с ног потока воздуха, группа бежала вниз, к деревьям.",
-   e:"Объясняет: внезапный страх, бегство в темноту. Не объясняет: спокойный, ровный шаг следов."},
-  {n:"03",t:"Инфразвук",s:"Акустика",k:"",
-   d:"Ветер, обтекающий скалистый гребень перевала, рождает низкочастотный звук, которого не слышит ухо — но чувствует тело. Инфразвук вызывает необъяснимую тревогу, ужас, учащённое сердцебиение. Версия из книги «Мёртвая гора»: группа бежала от страха, у которого не было источника.",
-   e:"Объясняет: иррациональную панику всех девятерых. Не объясняет: физические травмы у оврага."},
-  {n:"04",t:"Ракетные испытания",s:"Конспирология",k:"",
-   d:"В феврале–марте 1959 года жители Северного Урала видели в небе «огненные шары». Версия: обломки ракет или испытание оружия — отсюда свет, ожоги на коже и бета-загрязнение одежды. Следователь Лев Иванов в 90-е признавался, что верит в шары и «вернул бы дело».",
-   e:"Объясняет: радиацию, ожоги, секретность дела. Не объясняет: отсутствие внешних повреждений."},
-  {n:"05",t:"Парадоксальное раздевание",s:"Медицина",k:"",
-   d:"На терминальной стадии переохлаждения мозг посылает ложный сигнал жара — и замерзающий человек сам снимает одежду. Это объясняет раздетых под кедром и таинственные «обгоревшие» носки. Так гипотермия превращает бегство к теплу в бегство от него.",
-   e:"Объясняет: раздетость, странное поведение. Не объясняет: причину выхода из палатки."},
-  {n:"06",t:"Люди на склоне",s:"Отвергнута",k:"dim",
-   d:"Нападение — егеря, беглые, вахтовые зэки или «манси-хранители священной горы» — следствие исключило сразу: чужих следов не было, ценности остались нетронутыми, травмы не носят характера побоев. Манси, к слову, сами помогали искать группу неделями.",
-   e:"Объясняет: почти ничего. Не объясняет: почему эта версия до сих пор так кинематографична."}
+  {n:"01",t:"Snow slab",s:"Official · 2020",k:"red",
+   d:"In 2020, the Russian Prosecutor General's Office named an avalanche as the cause of death: at night a slab of snow — a «wind board» — slid onto the tent. Slashing the canvas open from inside, the group escaped into the blizzard and walked a mile and a half to the forest to avoid being buried by a second slide. Cold and wind did the rest.",
+   e:"Explains: the hasty departure, injuries from the slab. Does not explain: why they never returned for warm clothes in the morning."},
+  {n:"02",t:"Katabatic wind",s:"Meteorology",k:"",
+   d:"A hurricane-force downslope wind — a «buran whirlwind» — can sweep down from the summit of Kholat Syakhl. Gusts up to 40 m/s turn tents inside out, knock people off their feet, cause panic and rapid loss of orientation. Fleeing the air current that knocked them down, the group ran downhill, toward the trees.",
+   e:"Explains: the sudden terror, the flight into darkness. Does not explain: the calm, even pace of the tracks."},
+  {n:"03",t:"Infrasound",s:"Acoustics",k:"",
+   d:"Wind flowing around the rocky ridge of the pass generates low-frequency sound that the ear cannot hear but the body can feel. Infrasound causes inexplicable anxiety, terror, rapid heartbeat. The version from the book «Dead Mountain»: the group fled from a fear that had no source.",
+   e:"Explains: the irrational panic of all nine. Does not explain: the physical injuries at the ravine."},
+  {n:"04",t:"Rocket tests",s:"Conspiracy theory",k:"",
+   d:"In February–March 1959, residents of the Northern Urals saw «fireballs» in the sky. The version: rocket debris or weapons tests — hence the light, burns on skin, and beta contamination of clothing. Investigator Lev Ivanov admitted in the '90s that he believed in the fireballs and «would reopen the case.»",
+   e:"Explains: the radiation, the burns, the secrecy of the case. Does not explain: the absence of external injuries."},
+  {n:"05",t:"Paradoxical undressing",s:"Medicine",k:"",
+   d:"At the terminal stage of hypothermia the brain sends a false signal of heat — and a freezing person strips off their own clothes. This explains the undressed bodies under the cedar and the mysterious «burnt» socks. Thus hypothermia turns the flight toward warmth into a flight away from it.",
+   e:"Explains: the undressing, the strange behavior. Does not explain: why they left the tent at all."},
+  {n:"06",t:"People on the slope",s:"Rejected",k:"dim",
+   d:"An attack — by gamekeepers, escaped convicts, shift workers, or «Mansi guardians of the sacred mountain» — was ruled out by the investigation at once: no foreign tracks, valuables untouched, injuries not consistent with a beating. The Mansi, incidentally, helped search for the group for weeks themselves.",
+   e:"Explains: almost nothing. Does not explain: why this version remains so cinematic."}
 ];
 
 var FRAMES = [
-  ["images/hero-pass.jpg","Склон Холатчахль · ночь"],
-  ["images/group.jpg","Группа · январь 1959"],
-  ["images/march.jpg","Долина Ауспия · в пургу"],
-  ["images/tent.jpg","Палатка · вещдок"],
-  ["images/cedar.jpg","Кедр · костёр"],
-  ["images/ravine.jpg","Овраг · ручей"],
-  ["images/aurora.jpg","Сияние над Уралом"]
+  ["images/hero-pass.jpg","Kholat Syakhl slope · night"],
+  ["images/group.jpg","The group · January 1959"],
+  ["images/march.jpg","Auspiya Valley · in the blizzard"],
+  ["images/tent.jpg","The tent · evidence"],
+  ["images/cedar.jpg","The cedar · campfire"],
+  ["images/ravine.jpg","The ravine · stream"],
+  ["images/aurora.jpg","Aurora over the Urals"]
 ];
 
-/* ================== РЕНДЕР ================== */
+/* ================== RENDER ================== */
 function el(html){var t=document.createElement('template');t.innerHTML=html.trim();return t.content.firstElementChild;}
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 
-/* бегущая строка */
+/* marquee */
 (function(){
   var track=document.getElementById('marquee');
   if(!track)return;
@@ -782,7 +782,7 @@ function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').repl
   track.innerHTML=html;
 })();
 
-/* сетка участников */
+/* crew grid */
 (function(){
   var g=document.getElementById('crew-grid');
   if(!g)return;
@@ -790,7 +790,7 @@ function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').repl
     var card=el(
       '<div class="mcard reveal" style="transition-delay:'+((i%3)*80)+'ms">'+
         '<div class="top"><span class="mono mist">'+esc(m[0])+'</span>'+
-        '<span class="mono mist">'+esc(m[2])+' <span class="blood">года</span></span></div>'+
+        '<span class="mono mist">'+esc(m[2])+' <span class="blood">yrs</span></span></div>'+
         '<h3>'+esc(m[1])+'</h3>'+
         '<p class="role mono">'+esc(m[3])+'</p>'+
       '</div>');
@@ -798,7 +798,7 @@ function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').repl
   });
 })();
 
-/* находки */
+/* findings */
 (function(){
   var g=document.getElementById('find-grid');
   if(!g)return;
@@ -812,7 +812,7 @@ function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').repl
   });
 })();
 
-/* аккордеон версий */
+/* accordion */
 (function(){
   var acc=document.getElementById('accordion');
   if(!acc)return;
@@ -847,14 +847,14 @@ function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').repl
       }
     });
   });
-  /* раскрыть первый */
+  /* open the first one */
   requestAnimationFrame(function(){
     var first=acc.querySelector('.acc-item.open .acc-body');
     if(first)first.style.maxHeight=first.scrollHeight+'px';
   });
 })();
 
-/* плёнка */
+/* filmstrip */
 (function(){
   var strip=document.getElementById('filmstrip');
   if(!strip)return;
@@ -864,18 +864,18 @@ function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').repl
         '<img src="'+f[0]+'" alt="'+esc(f[1])+'" loading="lazy" />'+
         '<div class="scrim"></div>'+
         '<span class="idx mono"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="color:var(--blood)">'+ICONS.film+'</svg>'+
-        'Кадр '+('0'+(i+1))+'/07</span>'+
+        'Frame '+('0'+(i+1))+'/07</span>'+
         '<figcaption><q>'+esc(f[1])+'</q></figcaption>'+
       '</figure>'));
   });
 })();
 
-/* счётчики */
+/* counters */
 (function(){
   var wrap=document.getElementById('stats');
   if(!wrap)return;
   var years=new Date().getFullYear()-1959;
-  var data=[[9,"имён на мемориале"],[years,"лет без ответа"],[209,"томов домыслов и версий"],[0,"свидетелей той ночи"]];
+  var data=[[9,"names on the memorial"],[years,"years without an answer"],[209,"volumes of speculation"],[0,"witnesses of that night"]];
   data.forEach(function(d){
     wrap.appendChild(el('<div><b data-count="'+d[0]+'">0</b><span class="mono">'+esc(d[1])+'</span></div>'));
   });
@@ -902,7 +902,7 @@ function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').repl
   }else run();
 })();
 
-/* ================== ПОЯВЛЕНИЕ ПРИ СКРОЛЛЕ ================== */
+/* ================== REVEAL ON SCROLL ================== */
 (function(){
   var nodes=document.querySelectorAll('.reveal');
   if(!('IntersectionObserver' in window)){
@@ -916,7 +916,7 @@ function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').repl
   nodes.forEach(function(n){io.observe(n);});
 })();
 
-/* ================== ПРОГРЕСС И ПАРАЛЛАКС ================== */
+/* ================== PROGRESS & PARALLAX ================== */
 (function(){
   var bar=document.getElementById('progress');
   var layers=Array.prototype.slice.call(document.querySelectorAll('[data-parallax]'));
@@ -939,7 +939,7 @@ function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').repl
   update();
 })();
 
-/* ================== СНЕГОПАД ================== */
+/* ================== SNOWFALL ================== */
 (function(){
   var canvas=document.getElementById('snow');
   if(!canvas||!canvas.getContext)return;
@@ -991,22 +991,22 @@ function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').repl
   });
 })();
 
-/* ================== ПРЕЛОАДЕР ================== */
+/* ================== PRELOADER ================== */
 (function(){
   var hidden=false;
   function hide(){
     if(hidden)return;hidden=true;
     var p=document.getElementById('preloader');
     if(p){p.classList.add('done');setTimeout(function(){p.style.display='none';},1200);}
-    /* пересчитать открытую панель аккордеона после загрузки шрифтов */
+    /* recalculate open accordion panel height after fonts load */
     var open=document.querySelector('.acc-item.open .acc-body');
     if(open)open.style.maxHeight=open.scrollHeight+'px';
   }
   window.addEventListener('load',function(){setTimeout(hide,1700);});
-  setTimeout(hide,4500); /* страховка */
+  setTimeout(hide,4500); /* safety net */
 })();
 
-/* пересчёт высоты открытой панели при ресайзе */
+/* recalculate open panel height on resize */
 window.addEventListener('resize',function(){
   var open=document.querySelector('.acc-item.open .acc-body');
   if(open)open.style.maxHeight=open.scrollHeight+'px';
